@@ -5,7 +5,7 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: prod-registry01.pln.co.id/master-image/httpd:${CICD_EXECUTION_SEQUENCE}
-      pushRemote: 
+      pushRemote: true
       registry: prod-registry01
 - name: Deploy
   steps:
