@@ -6,7 +6,7 @@ stages:
       buildContext: .
       tag: wahyukac0401/httpd:${CICD_EXECUTION_SEQUENCE}
       pushRemote: 
-      registry: index.docker.io
+      registry: prod-registry01
 - name: Deploy
   steps:
   - applyYamlConfig:
