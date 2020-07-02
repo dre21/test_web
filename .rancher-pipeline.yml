@@ -7,6 +7,8 @@ stages:
       tag: prod-registry01.pln.co.id/master-image/httpd:${CICD_EXECUTION_SEQUENCE}
       pushRemote: true
       registry: prod-registry01
+    env:
+      PLUGIN_DEBUG: "true"
 - name: Deploy
   steps:
   - applyYamlConfig:
