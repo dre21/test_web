@@ -9,6 +9,7 @@ stages:
       registry: prod-registry01.pln.co.id
     env:
       PLUGIN_DEBUG: "true"
+      PLUGIN_INSECURE: "true"
 - name: Deploy
   steps:
   - applyYamlConfig:
