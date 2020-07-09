@@ -28,7 +28,7 @@ spec:
         app: httpd
     spec:
       imagePullSecrets:
-      - name: prod-registry01
+      - name: pipeline-docker-registry
       containers:
       - name: httpd
         image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
