@@ -5,7 +5,7 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: httpd:${CICD_EXECUTION_SEQUENCE}
-      pushRemote: true
+      pushRemote: false
       registry: 127.0.0.1:31469
 - name: Deploy
   steps:
