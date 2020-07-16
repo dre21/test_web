@@ -8,7 +8,7 @@ stages:
       pushRemote: true
       registry: index.docker.io
     env:
-      PLUGIN_INSECURE: "true"
+      PLUGIN_INSECURE: "false"
       PLUGIN_DEBUG: "true"
 - name: Deploy
   steps:
