@@ -28,9 +28,9 @@ spec:
         app: httpd
     spec:
       imagePullSecrets:
-      - name: pipeline-docker-registry
+      - name: harbor
       containers:
       - name: httpd
-        image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
+        image: prod-registry01.pln.co.id/test-prod/httpd:${CICD_EXECUTION_SEQUENCE}
         ports:
         - containerPort: 80
