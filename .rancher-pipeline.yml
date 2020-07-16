@@ -6,7 +6,7 @@ stages:
       buildContext: .
       tag: httpd:${CICD_EXECUTION_SEQUENCE}
       pushRemote: false
-      registry: 127.0.0.1:31469
+      registry: prod-registry01.pln.co.id:443
 - name: Deploy
   steps:
   - applyYamlConfig:
