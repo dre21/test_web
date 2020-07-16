@@ -4,9 +4,12 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: wahyukac0401/httpd:${CICD_EXECUTION_SEQUENCE}
+      tag: prod-registry01.pln.co.id/test-prod/httpd:${CICD_EXECUTION_SEQUENCE}
       pushRemote: true
-      registry: index.docker.io
+      registry: 10.1.84.31:443
+    env:
+      PLUGIN_INSECURE: "true"
+      PLUGIN_DEBUG: "true"
 - name: Deploy
   steps:
   - applyYamlConfig:
